@@ -82,39 +82,39 @@ namespace Tavisca.Bootcamp.LanguageBasics.Exercise1
             return result;
         }
 
-        private static List<int> MinValueIndexes(int[] arr, List<int> list)
+        private static List<int> MinValueIndexes(int[] caloreOrProteinOrCarbsOrFat, List<int> listOfIndexes)
         {
             int minValue = int.MaxValue;
 
-            foreach(int index in list)
+            foreach(int index in listOfIndexes)
             {
-                if(minValue > arr[index])
-                    minValue = arr[index];
+                if(minValue > caloreOrProteinOrCarbsOrFat[index])
+                    minValue = caloreOrProteinOrCarbsOrFat[index];
             }
 
             List<int> returnListofIndexes = new List<int>();
-            foreach(int index in list)
+            foreach(int index in listOfIndexes)
             {
-                if(minValue == arr[index])
+                if(minValue == caloreOrProteinOrCarbsOrFat[index])
                     returnListofIndexes.Add(index);
             }
             return returnListofIndexes;
         }
 
-        private static List<int> MaxValueIndexes(int[] arr, List<int> list)
+        private static List<int> MaxValueIndexes(int[] caloreOrProteinOrCarbsOrFat, List<int> listOfIndexes)
         {
             int maxValue = int.MinValue;
 
-            foreach(int index in list)
+            foreach(int index in listOfIndexes)
             {
-                if(maxValue < arr[index])
-                    maxValue = arr[index];
+                if(maxValue < caloreOrProteinOrCarbsOrFat[index])
+                    maxValue = caloreOrProteinOrCarbsOrFat[index];
             }
             
             List<int> returnListofIndexes = new List<int>();
-            foreach(int index in list)
+            foreach(int index in listOfIndexes)
             {
-                if(maxValue == arr[index])
+                if(maxValue == caloreOrProteinOrCarbsOrFat[index])
                     returnListofIndexes.Add(index);
             }
             return returnListofIndexes;
